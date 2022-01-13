@@ -1,4 +1,4 @@
-use std::io::stdin;
+use std::{io::stdin, process::exit};
 use rand::Rng;
 use std::cmp::Ordering;
 use colored::*;
@@ -37,7 +37,7 @@ fn main(){
         match guess.cmp(&secreat_number) {
             Ordering::Equal => {
                 println!("{}","You got it, and.. we don't have any prize for it. LOL".green());
-                break;
+                exit(0);
             },
             Ordering::Greater => {
                 if guess > 100{
@@ -58,7 +58,7 @@ fn main(){
         }
     }
 
-    println!("The Correct Answer {}",)
+    println!("The Correct Answer {}",secreat_number);
 
 }
 
@@ -70,4 +70,4 @@ fn main(){
 // Error Handling: Done
 // Adding color: Done
 // Debug if any: Done
-// Updating the repo:
+// Updating the repo: Done
