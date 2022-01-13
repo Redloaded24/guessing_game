@@ -37,12 +37,13 @@ fn main(){
         match guess.cmp(&secreat_number) {
             Ordering::Equal => {
                 println!("{}","You got it, and.. we don't have any prize for it. LOL".green());
+                break;
             },
             Ordering::Greater => {
                 if guess > 100{
                     println!("{}","Woah this guess is greater than the limit. Did you read the rules ?".magenta())
                 }else{
-                    println!("{}","Well your guess is greater than the answer".cyan());
+                    println!("{}","Your guess is greater than the answer".cyan());
                     life -= 1;
                 }
             }, 
@@ -50,14 +51,14 @@ fn main(){
                 if guess <= 0{
                     println!("{}","Woah this guess is lower than the limit. Did you read the rules ?".magenta())
                 }else{
-                    println!("{}","Well your guess is less than the answer".cyan());
+                    println!("{}","Your guess is less than the answer".cyan());
                     life -= 1;
                 }
             }
         }
     }
 
-
+    println!("The Correct Answer {}",)
 
 }
 
